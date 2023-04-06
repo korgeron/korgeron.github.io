@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    overflow-x: hidden;
+    overflow-y: scroll;
+    height: 100vh;
+    width: 100vw;
+    background: black;
+}
+
+body::-webkit-scrollbar {
+width: 0px;
+background: transparent;
+}
+
+.greeting-title{
+    color: white;
+    background: grey;
+    text-align: center;
+    padding: 5em;
+    margin: 2em 5em 0 5em;
+    border-radius: 1em;
+}
