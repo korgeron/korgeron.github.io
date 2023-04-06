@@ -26,10 +26,26 @@ background: transparent;
     padding: 5em;
     margin: 2em 5em 0 5em;
     border-radius: 1em;
+
+    scale:0;
+    animation-name: loadIn;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease
 }
 .greeting-title > h1 > span{
     color: red;
 }
+
+@keyframes loadIn {
+    from{
+        scale: 0;
+    }
+    to{
+        scale:1;
+    }
+}
+
 
 @media screen and (width >= 768px){
     .greeting-title{
