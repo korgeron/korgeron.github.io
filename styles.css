@@ -4,9 +4,12 @@
 }
 
 body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     overflow-x: hidden;
     overflow-y: scroll;
-    height: 100vh;
+    height: auto;
     width: 100vw;
     background: #1b73e33b;
 }
@@ -17,24 +20,62 @@ background: transparent;
 }
 
 .greeting-title{
+    width: 80vw;
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border: 1px solid black;
     box-shadow: 10px 5px 5px black;
     color: black;
     background: rgb(192,192,192, .8);
     text-align: center;
     font-size: 25px!important;
-    padding: 5em;
-    margin: 2em 5em 0 5em;
+    /*padding: 5em;*/
+    margin-bottom: 2em;
+    margin-top: 2em;
     border-radius: 1em;
-
-    scale:0;
+    scale:0; /*ANIMATION PORTION*/
     animation-name: loadIn;
+    animation-delay: .5s;
     animation-duration: 1.5s;
     animation-fill-mode: forwards;
     animation-timing-function: ease
 }
 .greeting-title > h1 > span{
     color: red;
+}
+
+.project-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 80vw;
+    height: auto;
+    /*border: 1px solid black;
+    box-shadow: 10px 5px 5px black;
+    color: black;
+    background: rgb(192,192,192, .8);
+    font-size: 25px!important;
+    *//*padding: 5em;*//*
+    margin-bottom: 2em;
+    border-radius: 1em;
+    scale:0; *//*ANIMATION PORTION*//*
+    animation-name: loadIn;
+    animation-delay: 1.5s;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease*/
+}
+
+.projects{
+    /*border-radius: 1em;*/
+    margin: 2em 1em 2em 1em;
+    border: 1px solid red;
+    height: 40vh;
+    width: 30vw;
+    scale: 0;
 }
 
 @keyframes loadIn {
