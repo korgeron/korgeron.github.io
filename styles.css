@@ -119,6 +119,13 @@ background: transparent;
     height: 100%;
     width: 100%;
 }
+.projects > h5{
+    position: absolute;
+    top: 32vh;
+    left: 15vw;
+    font-size: 40px;
+    color: darkblue;
+}
 
 @keyframes loadIn {
     from{
