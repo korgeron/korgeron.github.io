@@ -112,8 +112,11 @@ background: transparent;
 }
 
 
-@media screen and (width >= 768px){
+@media screen and (width > 768px){
     .greeting-title{
         font-size: 16px!important;
+    }
+    .projects{
+        width: 35vw!important;
     }
 }
