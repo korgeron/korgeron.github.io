@@ -97,6 +97,29 @@ background: transparent;
     scale: 0;
 }
 
+.projects > a{
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 1em;
+    position: absolute;
+    top: 3vh;
+    left: 2vw;
+    background: grey;
+    border: 2px solid black;
+    text-decoration: none;
+    padding: 1em;
+    transition: .5s ease;
+}
+.projects > a:hover{
+    background: red;
+    color: black;
+}
+.projects > img{
+    height: 100%;
+    width: 100%;
+}
+
 @keyframes loadIn {
     from{
         scale: 0;
