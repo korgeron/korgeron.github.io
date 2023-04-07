@@ -76,7 +76,7 @@ background: transparent;
     font-weight: bold;
     border-radius: 1em;
     box-shadow: 10px 5px 5px black;
-
+    color: black;
     scale:0; /*ANIMATION PORTION*/
     animation-name: loadIn;
     animation-delay: 1.5s;
