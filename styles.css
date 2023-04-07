@@ -69,12 +69,35 @@ background: transparent;
     animation-timing-function: ease*/
 }
 
+.show-projects{
+    width: 70vw;
+    height: 10vh;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 1em;
+    box-shadow: 10px 5px 5px black;
+
+    scale:0; /*ANIMATION PORTION*/
+    animation-name: loadIn;
+    animation-delay: 1.5s;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease;
+    transition: .5s ease-in-out;
+}
+.show-projects:hover{
+    cursor: pointer;
+    background: grey;
+    box-shadow: 10px 5px 5px red;
+    color: white;
+}
+
 .projects{
     /*border-radius: 1em;*/
     margin: 2em 1em 2em 1em;
     border: 1px solid red;
     height: 40vh;
-    width: 30vw;
+    width: 80vw;
     scale: 0;
 }
 
