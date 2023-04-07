@@ -1,3 +1,11 @@
+:root{
+    --cardBackground: rgb(192,192,192, .8);
+    --background: black;
+    --shadow: blue;
+    --myName: red;
+    --textColor: black;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -11,7 +19,7 @@ body{
     overflow-y: scroll;
     height: auto;
     width: 100vw;
-    background: #1b73e33b;
+    background: var(--background);
 }
 
 body::-webkit-scrollbar {
@@ -25,10 +33,10 @@ background: transparent;
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid black;
-    box-shadow: 10px 5px 5px black;
-    color: black;
-    background: rgb(192,192,192, .8);
+    /*border: 1px solid black;*/
+    box-shadow: 10px 10px 10px var(--shadow);
+    color: var(--textColor);
+    background: var(--cardBackground); /*NEED VARIABLE HERE*/
     text-align: center;
     font-size: 25px!important;
     padding: 1em;
@@ -43,7 +51,7 @@ background: transparent;
     animation-timing-function: ease
 }
 .greeting-title > h1 > span{
-    color: red;
+    color: var(--myName);
 }
 
 .project-container{
@@ -53,20 +61,6 @@ background: transparent;
     align-items: center;
     width: 80vw;
     height: auto;
-    /*border: 1px solid black;
-    box-shadow: 10px 5px 5px black;
-    color: black;
-    background: rgb(192,192,192, .8);
-    font-size: 25px!important;
-    *//*padding: 5em;*//*
-    margin-bottom: 2em;
-    border-radius: 1em;
-    scale:0; *//*ANIMATION PORTION*//*
-    animation-name: loadIn;
-    animation-delay: 1.5s;
-    animation-duration: 1.5s;
-    animation-fill-mode: forwards;
-    animation-timing-function: ease*/
 }
 
 .show-projects{
@@ -75,8 +69,8 @@ background: transparent;
     font-size: 20px;
     font-weight: bold;
     border-radius: 1em;
-    box-shadow: 10px 5px 5px black;
-    color: black;
+    box-shadow: 10px 10px 10px var(--shadow);
+    color: textColor;
     scale:0; /*ANIMATION PORTION*/
     animation-name: loadIn;
     animation-delay: 1.5s;
@@ -85,7 +79,7 @@ background: transparent;
     animation-timing-function: ease;
     transition: .5s ease-in-out;
 }
-.show-projects:hover{
+.show-projects:hover{ /*NEED TO PLAY WITH THIS AFTER REFACTOR*/
     cursor: pointer;
     background: grey;
     box-shadow: 10px 5px 5px red;
@@ -94,9 +88,10 @@ background: transparent;
 
 .projects{
     /*border-radius: 1em;*/
+    background: var(--cardBackground);
     margin: 2em 1em 2em 1em;
     border: 1px solid black;
-    box-shadow: 10px 5px 5px black;
+    box-shadow: 10px 10px 10px var(--shadow);
     height: 40vh;
     width: 80vw;
     scale: 0;
