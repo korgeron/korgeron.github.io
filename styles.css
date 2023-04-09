@@ -28,17 +28,16 @@ background: transparent;
 }
 
 .greeting-title{
+    font-size: 3vh!important;
     width: 80vw;
     height: 20vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    /*border: 1px solid black;*/
     box-shadow: 10px 10px 10px var(--shadow);
     color: var(--textColor);
     background: var(--cardBackground); /*NEED VARIABLE HERE*/
     text-align: center;
-    font-size: 25px!important;
     padding: 1em;
     margin-bottom: 2em;
     margin-top: 2em;
@@ -48,10 +47,22 @@ background: transparent;
     animation-delay: .5s;
     animation-duration: 1.5s;
     animation-fill-mode: forwards;
-    animation-timing-function: ease
+    animation-timing-function: ease;
+    transition: .5s ease;
 }
+.greeting-title:hover{
+    box-shadow: 10px 10px 10px red;
+}
+
+.greeting-h1{
+    color: white;
+    transition: .5s ease-in-out;
+
+}
+
 .greeting-title > h1 > span{
-    color: var(--myName);
+    color: blue;
+    transition: .5s ease-in-out;
 }
 
 .project-container{
@@ -100,6 +111,11 @@ background: transparent;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    transition: .5s ease;
+}
+
+.projects:hover{
+    box-shadow: 10px 10px 10px red;
 }
 
 .projects > a{
@@ -137,9 +153,6 @@ background: transparent;
 
 
 @media screen and (width >1000px){
-    .greeting-title{
-        font-size: 16px!important;
-    }
     .projects{
         width: 35vw!important;
     }
