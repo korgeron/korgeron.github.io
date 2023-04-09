@@ -54,11 +54,6 @@ background: transparent;
     box-shadow: 10px 10px 10px red;
 }
 
-.greeting-h1{
-    color: white;
-    transition: .5s ease-in-out;
-
-}
 
 .greeting-title > h1 > span{
     color: blue;
