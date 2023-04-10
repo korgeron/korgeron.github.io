@@ -108,11 +108,12 @@ background: transparent;
     justify-content: space-between;
     transition: .5s ease;
 }
-
 .projects:hover{
     box-shadow: 10px 10px 10px red;
 }
-
+.projects:nth-child(1){
+    display: none;
+}
 .projects > a{
     color: white;
     font-weight: bold;
@@ -147,8 +148,14 @@ background: transparent;
 }
 
 
-@media screen and (width >1000px){
+@media screen and (width >= 800px){
     .projects{
         width: 35vw!important;
+    }
+    .projects:nth-child(1){
+        display: flex;
+    }
+    .mobile-note{
+        display: none;
     }
 }
