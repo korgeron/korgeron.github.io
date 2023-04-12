@@ -148,7 +148,7 @@ background: transparent;
 }
 
 
-@media screen and (width >= 800px){
+@media screen and (width >= 1000px){
     .projects{
         width: 35vw!important;
     }
