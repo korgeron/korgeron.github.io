@@ -135,7 +135,7 @@ background: transparent;
 }
 .projects > h5{
     font-size: 4vh;
-    color: darkblue;
+    color: orange;
 }
 
 @keyframes loadIn {
