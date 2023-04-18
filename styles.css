@@ -136,6 +136,7 @@ background: transparent;
 .projects > h5{
     font-size: 4vh;
     color: orange;
+    text-align: center;
 }
 
 @keyframes loadIn {
