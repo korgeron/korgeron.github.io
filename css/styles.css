@@ -1,0 +1,266 @@
+*
+{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body
+{
+    height: 100svh;
+    width: 100svw;
+    display: grid;
+    place-items: center;
+    background: black;
+}
+
+.light-source
+{
+    height: 15rem;
+    width: 15rem;
+    background: radial-gradient(white , white , black , black);
+    display: grid;
+    place-items: center;
+}
+
+.folder
+{
+    height: 10rem;
+    width: 10rem;
+    position: relative;
+    animation: none;
+
+    transform-style: preserve-3d;
+    transition: 1s ease-in-out;
+}
+.folder:hover
+{
+    cursor: pointer;
+}
+
+.folder__back,
+.folder__front
+{
+    transition: 1s ease-in-out;
+    scale: 0.95;
+    height: inherit;
+    width: inherit;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    bottom: 0;
+    display: grid;
+    place-items: center;
+}
+
+.folder__back
+{
+    z-index: -2;
+    background-image: url('../images/folder-back.png');
+}
+.folder__back > p
+{
+    transform: rotateY(180deg);
+}
+
+.folder__front
+{
+    bottom: 1.35rem;
+    height: 7.8rem;
+    border-radius: 1em 0 0 0;
+    background-image: url('../images/folder-front.png');
+    backface-visibility: hidden;
+    /*animation:  2s forwards;*/
+    transform-origin: bottom;
+    z-index: -1;
+}
+
+.unselectable
+{
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.content
+{
+    height: 15rem;
+    width: 10rem;
+    position: relative;
+    bottom: 2rem;
+    display: grid;
+    opacity: 0;
+    grid-template-columns: repeat(2, 1fr);
+    place-items: center;
+    padding-top: .5rem;
+    overflow-y: scroll;
+}
+.content::-webkit-scrollbar
+{
+    display: none;
+}
+
+.close-folder
+{
+    position: absolute;
+    top: .5em;
+    right: .5em;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .1em;
+}
+
+
+/*PROJECTS PORTION*/
+.project-container
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 1rem;
+    width: inherit;
+    height: inherit;
+}
+
+.projects
+{
+    background-size: contain;
+    background-repeat: no-repeat;
+
+
+    background: var(--cardBackground);
+    margin: 1.5rem .5rem;
+    border: 1px solid black;
+    box-shadow: 10px 10px 10px var(--shadow);
+    height: 35%;
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    transition: .5s ease;
+}
+
+.projects:hover
+{
+    box-shadow: 5px 5px 5px red;
+}
+.projects:nth-child(1)
+{
+    position: absolute;
+    left: -1000px;
+}
+.projects > p
+{
+    margin-bottom: .5em;
+    padding: .1em;
+    color: white;
+    font-weight: bold;
+    font-size: xx-small;
+    border-radius: 1em;
+    background: blue;
+    border: 1px solid black;
+    text-decoration: none;
+    transition: .5s ease;
+}
+
+.projects > img
+{
+    height: 100%;
+    width: 100%;
+}
+.projects > h5
+{
+    color: darkorange;
+    text-align: center;
+    font-size: xx-small;
+    margin: 0 .5rem;
+}
+
+
+
+
+/*ANIMATIONS*/
+@keyframes rotator
+{
+    from
+    {
+        transform: rotateY(0);
+    }
+    to
+    {
+        transform: rotateY(360deg);
+    }
+}
+
+@keyframes hide-text
+{
+    0%
+    {
+        color: black;
+    }
+
+    100%
+    {
+        color: transparent;
+    }
+}
+
+@keyframes folder__front-open
+{
+    0%
+    {
+        transform: rotateX(0);
+        backface-visibility: hidden;
+
+    }
+
+    100%
+    {
+        transform: rotateX(-190deg);
+        backface-visibility: visible;
+        /*   color: transparent;*/
+    }
+}
+
+@keyframes loadIn
+{
+    from{
+        scale: 0;
+    }
+    to{
+        scale:1;
+    }
+}
+
+@keyframes fade-in
+{
+    0%
+    {
+        opacity: 0;
+    }
+
+    100%
+    {
+        opacity: 1;
+    }
+}
+
+@media screen and (min-width: 1000px){
+    .folder
+    {
+        animation: rotator 2s linear infinite;
+    }
+
+/*    .projects{
+        width: 35vw!important;
+    }*/
+
+    .projects:nth-child(1){
+        position: unset;
+    }
+}

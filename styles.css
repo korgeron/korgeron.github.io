@@ -1,4 +1,5 @@
-:root{
+:root
+{
     --cardBackground: rgb(192,192,192, .8);
     --background: black;
     --shadow: blue;
@@ -6,12 +7,14 @@
     --textColor: black;
 }
 
-*{
+*
+{
     margin: 0;
     padding: 0;
 }
 
-body{
+body
+{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -22,12 +25,14 @@ body{
     background: var(--background);
 }
 
-body::-webkit-scrollbar {
-width: 0px;
-background: transparent;
+body::-webkit-scrollbar
+{
+    width: 0;
+    background: transparent;
 }
 
-.greeting-title{
+.greeting-title
+{
     font-size: 3vh!important;
     width: 80vw;
     height: 20vh;
@@ -50,17 +55,20 @@ background: transparent;
     animation-timing-function: ease;
     transition: .5s ease;
 }
-.greeting-title:hover{
+.greeting-title:hover
+{
     box-shadow: 10px 10px 10px red;
 }
 
 
-.greeting-title > h1 > span{
+.greeting-title > h1 > span
+{
     color: blue;
     transition: .5s ease-in-out;
 }
 
-.project-container{
+.project-container
+{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -69,14 +77,15 @@ background: transparent;
     height: auto;
 }
 
-.show-projects{
+.show-projects
+{
     width: 70vw;
     height: 10vh;
     font-size: 20px;
     font-weight: bold;
     border-radius: 1em;
     box-shadow: 10px 10px 10px var(--shadow);
-    color: textColor;
+    color: var(--textColor);
     scale:0; /*ANIMATION PORTION*/
     animation-name: loadIn;
     animation-delay: 1.5s;
@@ -85,14 +94,16 @@ background: transparent;
     animation-timing-function: ease;
     transition: .5s ease-in-out;
 }
-.show-projects:hover{ /*NEED TO PLAY WITH THIS AFTER REFACTOR*/
+.show-projects:hover
+{ /*NEED TO PLAY WITH THIS AFTER REFACTOR*/
     cursor: pointer;
     background: grey;
     box-shadow: 10px 5px 5px red;
     color: white;
 }
 
-.projects{
+.projects
+{
     /*border-radius: 1em;*/
     padding: 1em;
     background: var(--cardBackground);
@@ -108,13 +119,16 @@ background: transparent;
     justify-content: space-between;
     transition: .5s ease;
 }
-.projects:hover{
+.projects:hover
+{
     box-shadow: 10px 10px 10px red;
 }
-.projects:nth-child(1){
+.projects:nth-child(1)
+{
     display: none;
 }
-.projects > a{
+.projects > a
+{
     color: white;
     font-weight: bold;
     font-size: 2.5vh;
@@ -125,21 +139,53 @@ background: transparent;
     padding: 1em;
     transition: .5s ease;
 }
-.projects > a:hover{
+.projects > a:hover
+{
     background: red;
     color: black;
 }
-.projects > img{
+.projects > img
+{
     height: 100%;
     width: 100%;
 }
-.projects > h5{
+.projects > h5
+{
     font-size: 4vh;
     color: orange;
     text-align: center;
 }
 
-@keyframes loadIn {
+.show_new_index
+{
+    scale: 0;
+    background: grey;
+    border-radius: 1rem;
+    padding: 1rem;
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 1em;
+    animation-name: loadIn;
+    animation-delay: .5s;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease;
+    transition: .5s ease;
+}
+
+.show_new_index > a
+{
+    text-decoration: none;
+    color: blue;
+}
+
+.show_new_index > a > span
+{
+    color: rgba(255, 0, 0, 0.66);
+}
+
+@keyframes loadIn
+{
     from{
         scale: 0;
     }
@@ -149,7 +195,8 @@ background: transparent;
 }
 
 
-@media screen and (width >= 1000px){
+@media screen and (width >= 1000px)
+{
     .projects{
         width: 35vw!important;
     }
